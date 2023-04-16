@@ -53,3 +53,4 @@ Test documentation, including the test scenarios, test results, and any issues o
 
 This project is licensed under the [License Name] License - see the [LICENSE](LICENSE) file for details.
 
+Google spreadsheet for the documentation: https://docs.google.com/spreadsheets/d/1NzxWrTFypZNsFklmJk5sz0k2flCynkzRMj2e_qSSlZs/edit?usp=sharing
