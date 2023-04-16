@@ -13,9 +13,9 @@ public class LoginTest {
   @BeforeTest
   public void setUp() {
     // Set up the WebDriver and open the login page
-    System.setProperty("webdriver.chrome.driver", "/Users/sudardavid/Downloads/chromedriver_mac64/chromedriver"); // Update path to your chromedriver executable
+    System.setProperty("webdriver.chrome.driver", "/Users/sudardavid/Downloads/chromedriver_mac64/chromedriver");
     driver = new ChromeDriver();
-    driver.get("http://test-automation-blog.greenfox.academy/wp-login.php"); // Update URL to your login page
+    driver.get("http://test-automation-blog.greenfox.academy/wp-login.php");
   }
 
   @AfterTest
@@ -39,12 +39,12 @@ public class LoginTest {
   @Test
   public void testLoginFailure() {
     // Enter invalid username and password
-    driver.findElement(By.id("user_login")).sendKeys("invalidusername"); // Update locator to match the username field
-    driver.findElement(By.id("user_pass")).sendKeys("invalidpassword"); // Update locator to match the password field
+    driver.findElement(By.id("user_login")).sendKeys("invalidusername");
+    driver.findElement(By.id("user_pass")).sendKeys("invalidpassword");
     driver.findElement(By.id("wp-submit")).click();
 
     // Verify failed login
-    String errorMessage = driver.findElement(By.id("login_error")).getText(); // Update locator to match the error message element
+    String errorMessage = driver.findElement(By.id("login_error")).getText();
     assertEquals("Unknown username. Check again or try your email address.", errorMessage, "Error message is not as expected");
   }
 }

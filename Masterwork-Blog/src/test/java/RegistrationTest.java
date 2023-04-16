@@ -61,7 +61,7 @@ public class RegistrationTest {
     driver.findElement(By.id("last_name-46")).sendKeys(lastName);
     driver.findElement(By.id("user_email-46")).sendKeys(email);
     driver.findElement(By.id("user_password-46")).sendKeys(password);
-    driver.findElement(By.id("confirm_user_password-46")).sendKeys("invalid_password"); // Providing invalid confirm password
+    driver.findElement(By.id("confirm_user_password-46")).sendKeys("invalid_password");
     driver.findElement(By.id("um_field_46_privacy_statement")).click();
     driver.findElement(By.id("um-submit-btn")).click();
 
