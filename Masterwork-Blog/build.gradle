@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral() // Include Maven Central repository
+
+    // Add Allure repository
+    maven {
+        url "https://dl.bintray.com/qameta/maven"
+    }
+
+    // Add TestNG repository
+    maven {
+        url "https://repo.maven.apache.org/maven2/"
+    }
+}
+
+dependencies {
+    testImplementation platform('org.testng:testng:7.3.0') // Update to TestNG version
+    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.1.1'
+    testImplementation 'org.testng:testng:7.3.0' // Update to TestNG version
+    implementation("com.google.guava:guava:31.1-jre")
+    implementation group: 'org.apache.commons', name: 'commons-csv', version: '1.10.0'
+
+}
+
+test {
+    useTestNG() // Update to use TestNG as the test runner
+}
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+
